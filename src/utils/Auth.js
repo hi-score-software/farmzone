@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 
 export function Guest(WrappedComponent) {
   let token = '';
-  const user= JSON.parse(window.localStorage.getItem("current_user"));
+  const user= JSON.parse(window.localStorage.getItem("farmzone_user"));
   if(!user || (user && user.user) === undefined){
     token = null
   }else{
@@ -14,7 +14,7 @@ export function Guest(WrappedComponent) {
       return !token ? (
         <WrappedComponent {...this.props} />
       ) : (
-        <Redirect to="/gifts" />
+        <Redirect to="/dashboard" />
       );
     }
   };
@@ -22,7 +22,7 @@ export function Guest(WrappedComponent) {
 
 export function Private(WrappedComponent) {
   let token = '';
-  const user= JSON.parse(window.localStorage.getItem("current_user"));
+  const user= JSON.parse(window.localStorage.getItem("farmzone_user"));
   if(!user || (user && user.user) === undefined){
     token = null
   }else{

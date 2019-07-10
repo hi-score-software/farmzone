@@ -9,8 +9,8 @@ class App extends Component {
     return (
      <BrowserRouter>
       <Switch>
-        <Route exact path="/register" component={LoadableRoutes.RegisterPage} />
-       
+        <Route exact path="/register" component={Guest(LoadableRoutes.RegisterPage)} />
+        <Route exact path="/login" component={Guest(LoadableRoutes.LoginPage)} />
       </Switch>
      </BrowserRouter>
     );
