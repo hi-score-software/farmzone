@@ -208,6 +208,7 @@ class Login extends PureComponent {
                                 <img
                                   src={require("../../assets/ring-loader.svg")}
                                   style={{ width: 25, height: 25 }}
+                                  alt="loader"
                                 />
                               ) : (
                                 "Login"

@@ -11,6 +11,7 @@ class App extends Component {
       <Switch>
         <Route exact path="/register" component={Guest(LoadableRoutes.RegisterPage)} />
         <Route exact path="/login" component={Guest(LoadableRoutes.LoginPage)} />
+        <Route exact path="/dashboard" component={Private(LoadableRoutes.Dashboard)} />
       </Switch>
      </BrowserRouter>
     );
